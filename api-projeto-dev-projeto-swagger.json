@@ -1,0 +1,102 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "API de feedbacks para o projeto semestral de tópicos avançados em backend",
+    "version" : "2023-11-01T20:11:13Z",
+    "title" : "api-projeto"
+  },
+  "host" : "leswbxsfhc.execute-api.us-east-1.amazonaws.com",
+  "basePath" : "/dev-projeto",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/feedback" : {
+      "get" : {
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        }
+      },
+      "post" : {
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "FeedbackModel",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/FeedbackModel"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "api_key" : [ ]
+        } ]
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            },
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "api_key" : {
+      "type" : "apiKey",
+      "name" : "x-api-key",
+      "in" : "header"
+    }
+  },
+  "definitions" : {
+    "Empty" : {
+      "type" : "object",
+      "title" : "Empty Schema"
+    },
+    "FeedbackModel" : {
+      "type" : "object",
+      "required" : [ "Classificacao", "Comentario", "Informacoes" ],
+      "properties" : {
+        "Classificacao" : {
+          "type" : "integer"
+        },
+        "Comentario" : {
+          "type" : "string"
+        },
+        "Informacoes" : {
+          "type" : "string"
+        }
+      },
+      "title" : "FeedbackModel"
+    }
+  }
+}

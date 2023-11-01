@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "d5978b6e-50d7-41cc-a369-11bf443c151d",
+		"name": "Projeto-Feedback",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22925158",
+		"_collection_link": "https://speeding-crater-475713.postman.co/workspace/Topicos-Avancados-Backend~2a65572c-656a-444c-a3c4-13972639ce99/collection/22925158-d5978b6e-50d7-41cc-a369-11bf443c151d?action=share&source=collection_link&creator=22925158"
+	},
+	"item": [
+		{
+			"name": "Salvar Feedback",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "h99xkXEWQ13OPZOE6v9s6FEyXDIfq6b2a659eBp3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://leswbxsfhc.execute-api.us-east-1.amazonaws.com/dev-projeto/feedback",
+					"protocol": "https",
+					"host": [
+						"leswbxsfhc",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev-projeto",
+						"feedback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recuperar Feedbacks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://leswbxsfhc.execute-api.us-east-1.amazonaws.com/dev-projeto/feedback",
+					"protocol": "https",
+					"host": [
+						"leswbxsfhc",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev-projeto",
+						"feedback"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
